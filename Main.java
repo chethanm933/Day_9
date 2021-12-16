@@ -10,7 +10,7 @@ public class Main {
 		int i = 0;
 		int n = 0;
 	
-		Contact contacts = new Contact();
+		
 		Phonebook phonebook = new Phonebook();
 		
 		
@@ -19,6 +19,7 @@ public class Main {
 			n = sc.nextInt();
 				
 		if(n == 1) {
+			 Contact contacts = new Contact();
 			 System.out.println("Add a contact: ");
 			 
 			 System.out.println("----------------------");
@@ -87,6 +88,7 @@ public class Main {
 		}
 
 		if(n == 5) {
+			Contact contacts = new Contact();
 			System.out.println("enter the number that you want to delete :");
 			long number = sc.nextLong();
 			phonebook.editContact(number);
@@ -96,9 +98,9 @@ public class Main {
 			System.out.println("----------------------");
 		}
 		
-		if(n == 6) {
+			if(n == 6) {
 			System.exit(0);
-		}
+			}
 		
 		} 
 	}
