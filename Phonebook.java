@@ -2,9 +2,7 @@ package PhoneBook;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
-
+import java.util.Scanner;
 
 public class Phonebook {
 	
@@ -27,16 +25,17 @@ public class Phonebook {
 	}
 	
 	public List<Contact> editContact(long phonenumber) {
-		Contact contact = new Contact();
-			for (Contact obj : phoneBook) {
-				if(obj.getPhoneNumber() == phonenumber) {
+			for (Contact edit : phoneBook) {
+				if( edit.getPhoneNumber() == phonenumber) {
+				System.out.println("enter the new number :");
+				Scanner sc = new Scanner(System.in);
+				edit.setPhoneNumber(sc.nextLong());
+				} else {
+					System.out.println("phone number does not exist");
 				}
-				
 			}
-		
-		
 		return phoneBook;
-	}
+	} 
 	
 	public Contact viewContactGivenPhone(long Phonenumber) {
 		Contact contact = new Contact();
@@ -50,10 +49,10 @@ public class Phonebook {
 			
 	public boolean removeContact (long phoneNumber) {
 		boolean f = false;
-			for (Contact obj1:phoneBook) {
-				if(obj1.getPhoneNumber() == phoneNumber) {
+			for (Contact contact1:phoneBook) {
+				if(contact1.getPhoneNumber() == phoneNumber) {
 						f = true;
-						phoneBook.remove(obj1);
+						phoneBook.remove(contact1);
 						break;
 					}
 				}

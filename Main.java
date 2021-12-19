@@ -20,11 +20,13 @@ public class Main {
 				
 		if(n == 1) {
 			 Contact contacts = new Contact();
+			 
 			 System.out.println("Add a contact: ");
+			 int temp = sc.nextInt();
 			 
 			 System.out.println("----------------------");
 			 
-             System.out.println("Enter the First Name: ");
+             System.out.println("1Enter the First Name: ");
              contacts.setFirstName(sc.nextLine());
              
              System.out.println("Enter the last Name: ");
@@ -89,13 +91,14 @@ public class Main {
 
 		if(n == 5) {
 			Contact contacts = new Contact();
-			System.out.println("enter the number that you want to delete :");
+			System.out.println("enter the number that you want to edit :");
 			long number = sc.nextLong();
 			phonebook.editContact(number);
-			System.out.println("enter the new number :");
-			long newnumber = sc.nextLong();
-			contacts.setPhoneNumber(newnumber);
+//			System.out.println("enter the new number :");
+//			long newnumber = sc.nextLong();
+//			contacts.setPhoneNumber(newnumber);
 			System.out.println("----------------------");
+			
 		}
 		
 			if(n == 6) {
