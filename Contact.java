@@ -1,7 +1,5 @@
 package PhoneBook;
 
-
-
 public class Contact {
 	
 	String First_Name;
@@ -36,9 +34,7 @@ public class Contact {
 	
 	public void setLastName(String lastname) {
 		this.Last_Name = lastname;
-		
 	}
-	
 	
 	public  String getState() {
 		return State;
@@ -51,7 +47,6 @@ public class Contact {
 	public  String getEmail() {
 		return E_mail;
 	}
-	
 	
 	public void setEmail(String email) {
 		this.E_mail = email;
